@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鍼灸国試 過去問アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>鍼灸国試 過去問対策</h1>
+            <button id="home-btn" style="display:none;">ホームに戻る</button>
+        </header>
+
+        <!-- ホーム画面 -->
+        <main id="home-screen">
+            <h2>カテゴリを選んでください</h2>
+            <div id="category-list"></div>
+            
+            <h2>復習モード</h2>
+            <button id="review-btn" class="special-btn">間違えた問題を解く</button>
+        </main>
+
+        <!-- クイズ画面 -->
+        <main id="quiz-screen" style="display:none;">
+            <div id="progress">問題 1 / 10</div>
+            
+            <!-- 連続問題の共通テキスト表示エリア -->
+            <div id="context-box" style="display:none;"></div>
+            
+            <div id="question-text"></div>
+            <div id="options-container"></div>
+            
+            <div id="explanation-box" style="display:none;">
+                <h3 id="result-title"></h3>
+                <p id="explanation-text"></p>
+                <button id="next-btn">次の問題へ</button>
+            </div>
+        </main>
+
+        <!-- 結果画面 -->
+        <main id="result-screen" style="display:none;">
+            <h2>結果発表</h2>
+            <p id="score-text"></p>
+            <button id="back-home-btn">ホームに戻る</button>
+        </main>
+    </div>
+
+    <!-- スクリプトの読み込み -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
